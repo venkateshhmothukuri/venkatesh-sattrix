@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SATTRIX';
+
+  logout(){
+    sessionStorage.setItem('islogin', JSON.stringify(false));
+  }
 }

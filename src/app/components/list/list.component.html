@@ -1,0 +1,50 @@
+
+<div style="display:flex;">
+  <div style="width: 30%;">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                  <a class="nav-link" routerLink="/list/list">
+                      list <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active" routerLink="/list/reg">
+                  <a class="nav-link">register</a>
+              </li>
+          </ul>
+  </div>
+  <div style="width: 70%;">
+    <h1> table page</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col">email</th>
+      <th scope="col">phone</th>
+      <th scope="col">city</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listItems;let i = index">
+      <th>{{item.name}}</th>
+      <th>{{item.email}}</th>
+      <th>{{item.phone}}</th>
+      <th>{{item.city}}</th>
+      <td class="list">
+        <div>
+          <a class="btn btn-primary a-btn-slide-text">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            <span><strong>Add</strong></span>
+          </a>
+        </div>
+        <div>
+          <a  (click)="delete(i)" class="btn btn-primary a-btn-slide-text">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            <span><strong>Delete</strong></span>
+          </a>
+        </div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
